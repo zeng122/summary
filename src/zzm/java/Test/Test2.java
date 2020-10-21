@@ -32,7 +32,8 @@ public class Test2 {
         cal.setTime(date);
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);
-        int day = 1;
+        int day = 3;
+
         cal.set(year, month, day, 0, 0, 0);
         return cal.getTime();
     }
