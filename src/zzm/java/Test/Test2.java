@@ -36,5 +36,5 @@ public class Test2 {
         cal.set(year, month, day, 0, 0, 0);
         return cal.getTime();
     }
-    
+
 }
