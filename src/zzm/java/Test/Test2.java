@@ -36,6 +36,7 @@ public class Test2 {
 
 	System.out.println("111111");
         cal.set(year, month, day, 0, 0, 0);
+	System.out.println("22222");
         return cal.getTime();
     }
 
