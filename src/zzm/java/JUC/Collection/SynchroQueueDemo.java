@@ -2,6 +2,7 @@ package zzm.java.JUC.Collection;
 
 import java.util.concurrent.SynchronousQueue;
 
+// 同步阻塞，没有人接收，会一直等
 public class SynchroQueueDemo {
     public  static  void main(String[] args){
         SynchronousQueue<String> queue = new SynchronousQueue<>();

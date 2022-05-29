@@ -5,7 +5,7 @@ package zzm.java.SortAlgorithmDemo;
  *
  */
 public class QuickSortDemo {
-    public static  void main(String [] args){
+    public static  void main(String [] args) throws InterruptedException {
         int  [] a  = {5, 6 ,1 , 6 ,7 ,4, 3, 6, 7, 5, 9};
         QuickSortDemo quickSortDemo = new QuickSortDemo();
         quickSortDemo.sort(a,0,a.length-1);
