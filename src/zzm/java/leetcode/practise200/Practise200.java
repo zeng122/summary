@@ -1,9 +1,17 @@
 package zzm.java.leetcode.practise200;
 
+import sun.plugin.javascript.navig.Link;
+
 public class Practise200 {
 
     int[][] haveUsed;
     public static void main(String[] args) {
+        String s = new String("aa");
+        // 检查常量池中是否存在字符串aa，此处存在则直接返回
+        String s1 = s.intern();
+        String s2 = "aa";
+        System.out.println(s == s2);  // false
+        System.out.println(s1 == s2); // true
         Practise200 practise200 = new Practise200();
         char[][] grid = {
                 {'1','1','0','0','0'},

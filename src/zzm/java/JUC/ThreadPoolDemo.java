@@ -19,7 +19,28 @@ import java.util.concurrent.atomic.AtomicInteger;
  **/
 
 public class ThreadPoolDemo {
+    public  class ThreadPoolExecutorDemo extends ThreadPoolExecutor{
+        @Override
+        protected void beforeExecute(Thread t, Runnable r) {
+            super.beforeExecute(t, r);
+        }
 
+        public ThreadPoolExecutorDemo(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue) {
+            super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue);
+        }
+
+        public ThreadPoolExecutorDemo(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, ThreadFactory threadFactory) {
+            super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, threadFactory);
+        }
+
+        public ThreadPoolExecutorDemo(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, RejectedExecutionHandler handler) {
+            super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, handler);
+        }
+
+        public ThreadPoolExecutorDemo(int corePoolSize, int maximumPoolSize, long keepAliveTime, TimeUnit unit, BlockingQueue<Runnable> workQueue, ThreadFactory threadFactory, RejectedExecutionHandler handler) {
+            super(corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, threadFactory, handler);
+        }
+    }
     ExecutorService executorService1 = Executors.newFixedThreadPool(1);
     ExecutorService executorService2 = Executors.newSingleThreadExecutor();
     //上限没有，来一个处理一个
@@ -57,8 +78,9 @@ public class ThreadPoolDemo {
                        try {
                            System.out.println(Thread.currentThread().getName());
                            System.out.println("当前队列长度："+queue1.size());
-                           TimeUnit.SECONDS.sleep(100000000);
+                           TimeUnit.SECONDS.sleep(1);
                            synchronized (this) {j++;}
+                           System.out.println(Thread.currentThread().getName()+"执行完毕");
                        } catch (Exception e) {
                            e.printStackTrace();
                        }
@@ -75,7 +97,6 @@ public class ThreadPoolDemo {
 
     public static void main(String[] args) {
         ThreadPoolDemo threadPoolDemo = new ThreadPoolDemo();
-
 //      for(int i = 0 ; i<10;i++){
 //          executorService.submit(threadPoolDemo.runnable);
 //      }
