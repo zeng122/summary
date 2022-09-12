@@ -20,6 +20,7 @@ public class Test5 {
         System.out.println(string.hashCode());
         //Test5 test5 = new Test5();
         //test5.fun2();
+        System.out.println(11111);
 
     }
 
