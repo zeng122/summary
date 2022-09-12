@@ -25,6 +25,7 @@ public class Test5 {
     }
 
     public void fun2(){
+        System.out.println("2222");
         while(true){
             try {
                 Thread.sleep(5*1000);
