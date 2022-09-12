@@ -1,5 +1,11 @@
 package zzm.java.extendsDemo;
 
+import com.sun.istack.internal.NotNull;
+
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.concurrent.ConcurrentHashMap;
+
 public class Student extends Person {
     private String name;
     private String password;
@@ -15,8 +21,16 @@ public class Student extends Person {
      * @param args
      */
     public static void main(String []args){
-        Student student1 = new Student("123","231");
-        Student student2 = new Student("123","231");
+        HashMap hashMap = new HashMap();
+        hashMap.containsKey();
+        hashMap.get();
+        ConcurrentHashMap
+        Hashtable<String,String> hashtable = new Hashtable();
+        hashtable.put("ddd",null);
+        hashMap.put(null,null);
+        Person student1 = new Student("123","231");
+        Person student2 = new Student("123","231");
+        System.out.println(student1.getHeight());
         if(student1.equals(student2)){
             System.out.println("pl");
         }else{

@@ -1,7 +1,11 @@
 package zzm.java.extendsDemo;
 
 public class Person {
-    private final String height = "170cm";
+    private  String height = "170cm";
+
+    String getHeight() {
+        return height;
+    }
 
     public final void fun(){
         System.out.println("can not extend");
