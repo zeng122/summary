@@ -1,7 +1,5 @@
 package zzm.java.extendsDemo;
 
-import com.sun.istack.internal.NotNull;
-
 import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.concurrent.ConcurrentHashMap;
@@ -22,9 +20,6 @@ public class Student extends Person {
      */
     public static void main(String []args){
         HashMap hashMap = new HashMap();
-        hashMap.containsKey();
-        hashMap.get();
-        ConcurrentHashMap
         Hashtable<String,String> hashtable = new Hashtable();
         hashtable.put("ddd",null);
         hashMap.put(null,null);

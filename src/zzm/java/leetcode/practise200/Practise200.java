@@ -1,7 +1,5 @@
 package zzm.java.leetcode.practise200;
 
-import sun.plugin.javascript.navig.Link;
-
 public class Practise200 {
 
     int[][] haveUsed;

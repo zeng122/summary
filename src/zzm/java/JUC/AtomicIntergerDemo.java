@@ -1,7 +1,5 @@
 package zzm.java.JUC;
 
-import sun.misc.Unsafe;
-
 import java.util.ArrayList;
 import java.util.concurrent.atomic.AtomicInteger;
 
